@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     async function fetchGitHubStats() {
         const headers = {
-            'Authorization': `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
+            'Authorization': `token ${process.env.GITHUB_TOKEN}`,
             'Accept': 'application/vnd.github.v3+json'
         };
         
@@ -39,7 +39,7 @@ async function fetchDetailedStats() {
     console.log('Script loaded and running!');
 
     const headers = {
-        'Authorization': `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
+        'Authorization': `token ${process.env.GITHUB_TOKEN}`,
         'Accept': 'application/vnd.github.v3+json'
     };
 
@@ -90,7 +90,12 @@ function updateStats(data) {
 
 
 async function fetchGitHubStats() {
-    const response = await fetch('https://api.github.com/search/repositories?q=ryton+in:name', { headers });
-    const data = await response.json();
-    updateStats(data);
+    try {
+        const response = await fetch('/api/github-stats');
+        const data = await response.json();
+        console.log('Received data:', data);
+        updateStats(data);
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
 }
