@@ -1,6 +1,5 @@
 const GITHUB_TOKEN = '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';
-const searchQuery = 'extension:ry+filename:*.ry+ZigModule+in:file+pack+in:file';
-
+const searchQuery = 'language:ryton';
 
 document.addEventListener('DOMContentLoaded', () => {
     async function fetchGitHubStats() {
