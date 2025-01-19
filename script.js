@@ -1,7 +1,9 @@
+const GITHUB_TOKEN = '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';
+
 document.addEventListener('DOMContentLoaded', () => {
     async function fetchGitHubStats() {
         const headers = {
-            'Authorization': `token ${process.env.GITHUB_TOKEN}`,
+            'Authorization': `token ${GITHUB_TOKEN}`,
             'Accept': 'application/vnd.github.v3+json'
         };
         
@@ -39,7 +41,7 @@ async function fetchDetailedStats() {
     console.log('Script loaded and running!');
 
     const headers = {
-        'Authorization': `token ${process.env.GITHUB_TOKEN}`,
+        'Authorization': `token ${GITHUB_TOKEN}`,
         'Accept': 'application/vnd.github.v3+json'
     };
 
