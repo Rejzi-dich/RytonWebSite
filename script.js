@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         try {
-            const response = await fetch('https://api.github.com/search/repositories?q=ryton+in:name', { headers });
+            const response = await fetch('https://api.github.com/search/repositories?q=in+RytonLang:name', { headers });
             const data = await response.json();
             console.log('Received data:', data);
             updateStats(data);
