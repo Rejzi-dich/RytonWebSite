@@ -1,0 +1,14 @@
+{
+  "functions": {
+    "api/*.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/github-stats",
+      "dest": "/api/github-stats.js"
+    }
+  ]
+}

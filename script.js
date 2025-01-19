@@ -93,7 +93,6 @@ async function fetchGitHubStats() {
     try {
         const response = await fetch('/api/github-stats');
         const data = await response.json();
-        console.log('Received data:', data);
         updateStats(data);
     } catch (error) {
         console.error('Fetch error:', error);
