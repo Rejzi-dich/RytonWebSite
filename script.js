@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     async function fetchGitHubStats() {
         const headers = {
-            'Authorization': `token ${process.env.GITHUB_TOKEN}`,
+            'Authorization': `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
             'Accept': 'application/vnd.github.v3+json'
         };
         
@@ -37,7 +37,7 @@ document.querySelectorAll('.code-card').forEach(card => {
 
 async function fetchDetailedStats() {
     const headers = {
-        'Authorization': `token ${process.env.GITHUB_TOKEN}`,
+        'Authorization': `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
         'Accept': 'application/vnd.github.v3+json'
     };
 
