@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryton Programming Language</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-blur">
+        <div class="nav-content">
+            <a href="#" class="logo">
+                <span>Ryton</span>
+            </a>
+            <div class="nav-links">
+                <a href="#why">Why Ryton</a>
+                <a href="#docs">Documentation</a>
+                <a href="#playground">Playground</a>
+                <a href="#stats">Statistics</a>
+                <a href="https://github.com/CodeLibraty/RytonLang" class="github-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="animated-bg">
+        <div class="particles"></div>
+        <h1 class="glow">Ryton Programming Language</h1>
+        <p class="subtitle fade-in">Modern programming with Zig, Python and JVM integration</p>
+        <div class="header-buttons fade-in-up">
+            <a href="#get-started" class="button primary">Get Started</a>
+            <a href="#docs" class="button secondary">Documentation</a>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-content">
+            <a href="#" class="logo">Ryton</a>
+            <div class="nav-links">
+                <a href="#why">Why Ryton</a>
+                <a href="#docs">Documentation</a>
+                <a href="#playground">Playground</a>
+                <a href="https://github.com/CodeLibraty/RytonLang" class="github-link">GitHub</a>
+            </div>
+        </div>
+    </nav>
+    <section class="team-branding">
+        <div class="logo-container">
+            <!-- Логотип Ryton -->
+            <div class="main-logo fade-in">
+                <img src="ryton.png" alt="Ryton Logo">
+                <h3>Ryton Language</h3>
+            </div>
+            
+            <!-- Логотип команды -->
+            <div class="team-logo fade-in-up">
+                <img src="codelibraty.png" alt="CodeLibraty Team">
+                <h3>CodeLibraty Team</h3>
+            </div>
+        </div>
+    </section>
+    <main>
+        <section id="code-example">
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="filename">example.ry</span>
+                    <button class="copy-button">Copy</button>
+                </div>
+                <pre><code class="language-ryton">
+#ZigModule(
+    pub fn fast_calc(x: i32) i32 {
+        return x * 2;
+    }
+) -> math // fast module in zig
+
+pack Calculator {
+    func calculate(int) {
+        return math.fast_calc(x) // use fast module
+    }
+}
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Zig Integration</h3>
+                    <p>Direct access to low-level performance</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Modern Syntax</h3>
+                    <p>Clean and expressive code</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Universal</h3>
+                    <p>Python and JVM ecosystem access</p>
+                </div>
+            </div>
+        </section>
+        <section id="stats" class="stats-section">
+            <h2>GitHub Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-code-branch"></i>
+                    <span class="stat-number" id="projects">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <span class="stat-number" id="stars">0</span>
+                    <span class="stat-label">Stars</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <span class="stat-number" id="contributors">0</span>
+                    <span class="stat-label">Contributors</span>
+                </div>
+            </div>
+        </section>
+        <section id="detailed-stats" class="stats-detailed">
+            <div class="stats-container">
+                <!--  Статистика релизов  -->
+                <div class="stat-block releases">
+                    <h3>Releases</h3>
+                    <div class="stat-content" id="releases-stats">
+                        <div class="version">Latest: v<span id="latest-version">0.0.0</span></div>
+                        <div class="total">Total: <span id="total-releases">0</span></div>
+                        <div class="downloads">Downloads: <span id="total-downloads">0</span></div>
+                    </div>
+                </div>
+        
+                <!--  Статистика коммитов  -->
+                <div class="stat-block commits">
+                    <h3>Commits</h3>
+                    <div class="stat-content" id="commits-stats">
+                        <div class="total">Total: <span id="total-commits">0</span></div>
+                        <div class="weekly">This week: <span id="weekly-commits">0</span></div>
+                        <div class="chart" id="commits-chart"></div>
+                    </div>
+                </div>
+        
+                <!-- Топ разработчиков -->
+                <div class="stat-block developers">
+                    <h3>Top Developers</h3>
+                    <div class="dev-cards">
+                        <div class="dev-card" id="top-pr">
+                            <img src="" alt="Avatar" class="dev-avatar">
+                            <div class="dev-info">
+                                <h4>Top PR Contributor</h4>
+                                <span class="dev-name"></span>
+                                <span class="dev-stats"></span>
+                            </div>
+                        </div>
+                        <div class="dev-card" id="top-dev">
+                            <img src="" alt="Avatar" class="dev-avatar">
+                            <div class="dev-info">
+                                <h4>Top Ryton Developer</h4>
+                                <span class="dev-name"></span>
+                                <span class="dev-stats"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Code Libraty team</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
