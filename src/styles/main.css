@@ -1,0 +1,234 @@
+/* Основные стили */
+:root {
+  --ryton-red: #FF3333;
+  --ryton-dark: #0A0A0A;
+  --ryton-gradient: linear-gradient(135deg, #000000, var(--ryton-dark), #2d0000);
+  --header-height: 80px;
+}
+
+body {
+  margin: 0;
+  background: var(--ryton-gradient);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Хедер */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 51, 51, 0.1);
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.logo:hover img {
+  transform: scale(1.1);
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, var(--ryton-red), #ff6666);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 1.1rem;
+}
+
+.nav-link:hover {
+  color: var(--ryton-red);
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 2rem;
+}
+
+.social-icon {
+  color: #ccc;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+
+.social-icon:hover {
+  color: var(--ryton-red);
+  transform: translateY(-2px);
+}
+
+/* Главная секция */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--header-height) 2rem 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 51, 51, 0.1) 0%, transparent 70%);
+}
+
+.team-title {
+  color: var(--ryton-red);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+
+.main-title {
+  font-size: 5rem;
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(to right, var(--ryton-red), #ff6666);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 0.8s 0.3s forwards;
+}
+
+.version {
+  color: #888;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  opacity: 0;
+  animation: fadeIn 0.8s 0.6s forwards;
+}
+
+/* Карусель с кодом */
+.code-carousel {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.code-slide {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 51, 51, 0.2);
+  padding: 2rem;
+  position: relative;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.code-title {
+  color: var(--ryton-red);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.code-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.code-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #444;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.code-dot.active {
+  background: var(--ryton-red);
+}
+
+.code-block {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.code-description {
+  color: #888;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 3rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .social-links {
+    margin-left: 1rem;
+  }
+}
