@@ -3,7 +3,7 @@
   --ryton-red: #FF3333;
   --ryton-dark: #0A0A0A;
   --ryton-gradient: linear-gradient(135deg, #000000, var(--ryton-dark), #2d0000);
-  --header-height: 80px;
+  --header-height: 65px;
 }
 
 body {
@@ -55,7 +55,7 @@ body {
 .logo-text {
   font-size: 1.5rem;
   font-weight: bold;
-  background: linear-gradient(to right, var(--ryton-red), #ff6666);
+  background: linear-gradient(to right, var(--ryton-red), #f34a4a);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -183,7 +183,7 @@ body {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   padding: 1.5rem;
-  font-family: 'Fira Code', monospace;
+  font-family: 'JetBrains-mono', monospace;
   font-size: 0.9rem;
   line-height: 1.5;
   overflow-x: auto;

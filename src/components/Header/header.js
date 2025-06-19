@@ -20,23 +20,19 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <Link to="/" className="logo">
+        <Link to="https://codelibraty.vercel.app/" className="logo">
           <div className="logo-container">
             <div className="logo-glow"></div>
             <img src={logo} alt="CLt" />
           </div>
-          <span className="logo-text">CLteam</span>
+          <span className="logo-text">CodeLibraty Foundation</span>
         </Link>
 
         <nav className="nav-menu">
           <div className="nav-links">
-            <Link to="/news" className="nav-link">
+            <Link to="/" className="nav-link">
               <div className="nav-link-background"></div>
-              <span>Новости</span>
-            </Link>
-            <Link to="/docs" className="nav-link">
-              <div className="nav-link-background"></div>
-              <span>Документация</span>
+              <span> </span>
             </Link>
           </div>
 

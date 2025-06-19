@@ -18,7 +18,7 @@ function App() {
                 <h1 className="main-title">Ryton Programming Language</h1>
                 <p className="version">v0.2.5 Alpha</p>
                 <LanguageInfo />
-                <h1 className="syntax">синтаксис языка в сравнении:</h1>
+                <h1 className="syntax">syntax:</h1>
                 <CodeCarousel />
               </section>
             </main>
